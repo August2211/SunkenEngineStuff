@@ -1,0 +1,397 @@
+<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<TargetFramework>net6.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>disable</Nullable>
+		<RootNamespace>SunkenEngineStuffStuff</RootNamespace>
+		<LangVersion>default</LangVersion>
+		<IsPackable>false</IsPackable>
+		<AssemblyVersion>1.0.0.0</AssemblyVersion>
+		<FileVersion>1.0.0.0</FileVersion>
+		<NeutralLanguage>en-US</NeutralLanguage>
+		<AssemblyName>SunkenEngineStuffStuff</AssemblyName>
+		<LangVersion>latest</LangVersion>
+		<ImplicitUsings>enable</ImplicitUsings>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<Reference Include="Assembly-CSharp-firstpass">
+			<HintPath>D:\augus\Programs\Steam\steamapps\common\Sunken Engine\MelonLoader\Il2CppAssemblies\Assembly-CSharp-firstpass.dll</HintPath>
+		</Reference>
+		<Reference Include="Assembly-CSharp">
+			<HintPath>D:\augus\Programs\Steam\steamapps\common\Sunken Engine\MelonLoader\Il2CppAssemblies\Assembly-CSharp.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppCinemachine">
+			<HintPath>D:\augus\Programs\Steam\steamapps\common\Sunken Engine\MelonLoader\Il2CppAssemblies\Il2CppCinemachine.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2Cppcom.cqf.urpvolumetricfog.runtime">
+			<HintPath>D:\augus\Programs\Steam\steamapps\common\Sunken Engine\MelonLoader\Il2CppAssemblies\Il2Cppcom.cqf.urpvolumetricfog.runtime.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppDemiLib">
+			<HintPath>D:\augus\Programs\Steam\steamapps\common\Sunken Engine\MelonLoader\Il2CppAssemblies\Il2CppDemiLib.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppDOTween">
+			<HintPath>D:\augus\Programs\Steam\steamapps\common\Sunken Engine\MelonLoader\Il2CppAssemblies\Il2CppDOTween.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppDOTweenPro">
+			<HintPath>D:\augus\Programs\Steam\steamapps\common\Sunken Engine\MelonLoader\Il2CppAssemblies\Il2CppDOTweenPro.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppEPO">
+			<HintPath>D:\augus\Programs\Steam\steamapps\common\Sunken Engine\MelonLoader\Il2CppAssemblies\Il2CppEPO.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppEPODemo">
+			<HintPath>D:\augus\Programs\Steam\steamapps\common\Sunken Engine\MelonLoader\Il2CppAssemblies\Il2CppEPODemo.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppEPOHDRP">
+			<HintPath>D:\augus\Programs\Steam\steamapps\common\Sunken Engine\MelonLoader\Il2CppAssemblies\Il2CppEPOHDRP.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppEPOURP">
+			<HintPath>D:\augus\Programs\Steam\steamapps\common\Sunken Engine\MelonLoader\Il2CppAssemblies\Il2CppEPOURP.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppEPOUtilities">
+			<HintPath>D:\augus\Programs\Steam\steamapps\common\Sunken Engine\MelonLoader\Il2CppAssemblies\Il2CppEPOUtilities.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppFacepunch.Steamworks.Win64">
+			<HintPath>D:\augus\Programs\Steam\steamapps\common\Sunken Engine\MelonLoader\Il2CppAssemblies\Il2CppFacepunch.Steamworks.Win64.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppFMODUnity">
+			<HintPath>D:\augus\Programs\Steam\steamapps\common\Sunken Engine\MelonLoader\Il2CppAssemblies\Il2CppFMODUnity.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppFMODUnityResonance">
+			<HintPath>D:\augus\Programs\Steam\steamapps\common\Sunken Engine\MelonLoader\Il2CppAssemblies\Il2CppFMODUnityResonance.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppMono.Security">
+			<HintPath>D:\augus\Programs\Steam\steamapps\common\Sunken Engine\MelonLoader\Il2CppAssemblies\Il2CppMono.Security.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2Cppmscorlib">
+			<HintPath>D:\augus\Programs\Steam\steamapps\common\Sunken Engine\MelonLoader\Il2CppAssemblies\Il2Cppmscorlib.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppNewtonsoft.Json">
+			<HintPath>D:\augus\Programs\Steam\steamapps\common\Sunken Engine\MelonLoader\Il2CppAssemblies\Il2CppNewtonsoft.Json.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppSirenix.OdinInspector.Attributes">
+			<HintPath>D:\augus\Programs\Steam\steamapps\common\Sunken Engine\MelonLoader\Il2CppAssemblies\Il2CppSirenix.OdinInspector.Attributes.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppSirenix.OdinInspector.Modules.Unity.Addressables">
+			<HintPath>D:\augus\Programs\Steam\steamapps\common\Sunken Engine\MelonLoader\Il2CppAssemblies\Il2CppSirenix.OdinInspector.Modules.Unity.Addressables.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppSirenix.OdinInspector.Modules.UnityLocalization">
+			<HintPath>D:\augus\Programs\Steam\steamapps\common\Sunken Engine\MelonLoader\Il2CppAssemblies\Il2CppSirenix.OdinInspector.Modules.UnityLocalization.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppSirenix.Serialization.Config">
+			<HintPath>D:\augus\Programs\Steam\steamapps\common\Sunken Engine\MelonLoader\Il2CppAssemblies\Il2CppSirenix.Serialization.Config.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppSirenix.Serialization">
+			<HintPath>D:\augus\Programs\Steam\steamapps\common\Sunken Engine\MelonLoader\Il2CppAssemblies\Il2CppSirenix.Serialization.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppSirenix.Utilities">
+			<HintPath>D:\augus\Programs\Steam\steamapps\common\Sunken Engine\MelonLoader\Il2CppAssemblies\Il2CppSirenix.Utilities.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppSystem.Configuration">
+			<HintPath>D:\augus\Programs\Steam\steamapps\common\Sunken Engine\MelonLoader\Il2CppAssemblies\Il2CppSystem.Configuration.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppSystem.Core">
+			<HintPath>D:\augus\Programs\Steam\steamapps\common\Sunken Engine\MelonLoader\Il2CppAssemblies\Il2CppSystem.Core.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppSystem.Data">
+			<HintPath>D:\augus\Programs\Steam\steamapps\common\Sunken Engine\MelonLoader\Il2CppAssemblies\Il2CppSystem.Data.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppSystem">
+			<HintPath>D:\augus\Programs\Steam\steamapps\common\Sunken Engine\MelonLoader\Il2CppAssemblies\Il2CppSystem.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppSystem.Drawing">
+			<HintPath>D:\augus\Programs\Steam\steamapps\common\Sunken Engine\MelonLoader\Il2CppAssemblies\Il2CppSystem.Drawing.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppSystem.Numerics">
+			<HintPath>D:\augus\Programs\Steam\steamapps\common\Sunken Engine\MelonLoader\Il2CppAssemblies\Il2CppSystem.Numerics.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppSystem.Runtime.Serialization">
+			<HintPath>D:\augus\Programs\Steam\steamapps\common\Sunken Engine\MelonLoader\Il2CppAssemblies\Il2CppSystem.Runtime.Serialization.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppSystem.Xml">
+			<HintPath>D:\augus\Programs\Steam\steamapps\common\Sunken Engine\MelonLoader\Il2CppAssemblies\Il2CppSystem.Xml.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppSystem.Xml.Linq">
+			<HintPath>D:\augus\Programs\Steam\steamapps\common\Sunken Engine\MelonLoader\Il2CppAssemblies\Il2CppSystem.Xml.Linq.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2Cpp__Generated">
+			<HintPath>D:\augus\Programs\Steam\steamapps\common\Sunken Engine\MelonLoader\Il2CppAssemblies\Il2Cpp__Generated.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.Addressables">
+			<HintPath>D:\augus\Programs\Steam\steamapps\common\Sunken Engine\MelonLoader\Il2CppAssemblies\Unity.Addressables.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.Burst">
+			<HintPath>D:\augus\Programs\Steam\steamapps\common\Sunken Engine\MelonLoader\Il2CppAssemblies\Unity.Burst.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.Burst.Unsafe">
+			<HintPath>D:\augus\Programs\Steam\steamapps\common\Sunken Engine\MelonLoader\Il2CppAssemblies\Unity.Burst.Unsafe.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.InputSystem">
+			<HintPath>D:\augus\Programs\Steam\steamapps\common\Sunken Engine\MelonLoader\Il2CppAssemblies\Unity.InputSystem.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.InputSystem.ForUI">
+			<HintPath>D:\augus\Programs\Steam\steamapps\common\Sunken Engine\MelonLoader\Il2CppAssemblies\Unity.InputSystem.ForUI.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.Localization">
+			<HintPath>D:\augus\Programs\Steam\steamapps\common\Sunken Engine\MelonLoader\Il2CppAssemblies\Unity.Localization.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.Mathematics">
+			<HintPath>D:\augus\Programs\Steam\steamapps\common\Sunken Engine\MelonLoader\Il2CppAssemblies\Unity.Mathematics.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.RenderPipeline.Universal.ShaderLibrary">
+			<HintPath>D:\augus\Programs\Steam\steamapps\common\Sunken Engine\MelonLoader\Il2CppAssemblies\Unity.RenderPipeline.Universal.ShaderLibrary.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.RenderPipelines.Core.Runtime">
+			<HintPath>D:\augus\Programs\Steam\steamapps\common\Sunken Engine\MelonLoader\Il2CppAssemblies\Unity.RenderPipelines.Core.Runtime.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.RenderPipelines.Universal.Runtime">
+			<HintPath>D:\augus\Programs\Steam\steamapps\common\Sunken Engine\MelonLoader\Il2CppAssemblies\Unity.RenderPipelines.Universal.Runtime.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.ResourceManager">
+			<HintPath>D:\augus\Programs\Steam\steamapps\common\Sunken Engine\MelonLoader\Il2CppAssemblies\Unity.ResourceManager.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.TextMeshPro">
+			<HintPath>D:\augus\Programs\Steam\steamapps\common\Sunken Engine\MelonLoader\Il2CppAssemblies\Unity.TextMeshPro.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.Timeline">
+			<HintPath>D:\augus\Programs\Steam\steamapps\common\Sunken Engine\MelonLoader\Il2CppAssemblies\Unity.Timeline.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.VisualEffectGraph.Runtime">
+			<HintPath>D:\augus\Programs\Steam\steamapps\common\Sunken Engine\MelonLoader\Il2CppAssemblies\Unity.VisualEffectGraph.Runtime.dll</HintPath>
+		</Reference>
+		<Reference Include="Unity.VisualScripting.Core">
+			<HintPath>D:\augus\Programs\Steam\steamapps\common\Sunken Engine\MelonLoader\Il2CppAssemblies\Unity.VisualScripting.Core.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.AccessibilityModule">
+			<HintPath>D:\augus\Programs\Steam\steamapps\common\Sunken Engine\MelonLoader\Il2CppAssemblies\UnityEngine.AccessibilityModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.AIModule">
+			<HintPath>D:\augus\Programs\Steam\steamapps\common\Sunken Engine\MelonLoader\Il2CppAssemblies\UnityEngine.AIModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.AndroidJNIModule">
+			<HintPath>D:\augus\Programs\Steam\steamapps\common\Sunken Engine\MelonLoader\Il2CppAssemblies\UnityEngine.AndroidJNIModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.AnimationModule">
+			<HintPath>D:\augus\Programs\Steam\steamapps\common\Sunken Engine\MelonLoader\Il2CppAssemblies\UnityEngine.AnimationModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.ARModule">
+			<HintPath>D:\augus\Programs\Steam\steamapps\common\Sunken Engine\MelonLoader\Il2CppAssemblies\UnityEngine.ARModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.AssetBundleModule">
+			<HintPath>D:\augus\Programs\Steam\steamapps\common\Sunken Engine\MelonLoader\Il2CppAssemblies\UnityEngine.AssetBundleModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.AudioModule">
+			<HintPath>D:\augus\Programs\Steam\steamapps\common\Sunken Engine\MelonLoader\Il2CppAssemblies\UnityEngine.AudioModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.ClothModule">
+			<HintPath>D:\augus\Programs\Steam\steamapps\common\Sunken Engine\MelonLoader\Il2CppAssemblies\UnityEngine.ClothModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.ContentLoadModule">
+			<HintPath>D:\augus\Programs\Steam\steamapps\common\Sunken Engine\MelonLoader\Il2CppAssemblies\UnityEngine.ContentLoadModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.CoreModule">
+			<HintPath>D:\augus\Programs\Steam\steamapps\common\Sunken Engine\MelonLoader\Il2CppAssemblies\UnityEngine.CoreModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.CrashReportingModule">
+			<HintPath>D:\augus\Programs\Steam\steamapps\common\Sunken Engine\MelonLoader\Il2CppAssemblies\UnityEngine.CrashReportingModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.DirectorModule">
+			<HintPath>D:\augus\Programs\Steam\steamapps\common\Sunken Engine\MelonLoader\Il2CppAssemblies\UnityEngine.DirectorModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine">
+			<HintPath>D:\augus\Programs\Steam\steamapps\common\Sunken Engine\MelonLoader\Il2CppAssemblies\UnityEngine.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.DSPGraphModule">
+			<HintPath>D:\augus\Programs\Steam\steamapps\common\Sunken Engine\MelonLoader\Il2CppAssemblies\UnityEngine.DSPGraphModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.GameCenterModule">
+			<HintPath>D:\augus\Programs\Steam\steamapps\common\Sunken Engine\MelonLoader\Il2CppAssemblies\UnityEngine.GameCenterModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.GIModule">
+			<HintPath>D:\augus\Programs\Steam\steamapps\common\Sunken Engine\MelonLoader\Il2CppAssemblies\UnityEngine.GIModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.GridModule">
+			<HintPath>D:\augus\Programs\Steam\steamapps\common\Sunken Engine\MelonLoader\Il2CppAssemblies\UnityEngine.GridModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.HotReloadModule">
+			<HintPath>D:\augus\Programs\Steam\steamapps\common\Sunken Engine\MelonLoader\Il2CppAssemblies\UnityEngine.HotReloadModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.ImageConversionModule">
+			<HintPath>D:\augus\Programs\Steam\steamapps\common\Sunken Engine\MelonLoader\Il2CppAssemblies\UnityEngine.ImageConversionModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.IMGUIModule">
+			<HintPath>D:\augus\Programs\Steam\steamapps\common\Sunken Engine\MelonLoader\Il2CppAssemblies\UnityEngine.IMGUIModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.InputLegacyModule">
+			<HintPath>D:\augus\Programs\Steam\steamapps\common\Sunken Engine\MelonLoader\Il2CppAssemblies\UnityEngine.InputLegacyModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.InputModule">
+			<HintPath>D:\augus\Programs\Steam\steamapps\common\Sunken Engine\MelonLoader\Il2CppAssemblies\UnityEngine.InputModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.JSONSerializeModule">
+			<HintPath>D:\augus\Programs\Steam\steamapps\common\Sunken Engine\MelonLoader\Il2CppAssemblies\UnityEngine.JSONSerializeModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.LocalizationModule">
+			<HintPath>D:\augus\Programs\Steam\steamapps\common\Sunken Engine\MelonLoader\Il2CppAssemblies\UnityEngine.LocalizationModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.ParticleSystemModule">
+			<HintPath>D:\augus\Programs\Steam\steamapps\common\Sunken Engine\MelonLoader\Il2CppAssemblies\UnityEngine.ParticleSystemModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.PerformanceReportingModule">
+			<HintPath>D:\augus\Programs\Steam\steamapps\common\Sunken Engine\MelonLoader\Il2CppAssemblies\UnityEngine.PerformanceReportingModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.Physics2DModule">
+			<HintPath>D:\augus\Programs\Steam\steamapps\common\Sunken Engine\MelonLoader\Il2CppAssemblies\UnityEngine.Physics2DModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.PhysicsModule">
+			<HintPath>D:\augus\Programs\Steam\steamapps\common\Sunken Engine\MelonLoader\Il2CppAssemblies\UnityEngine.PhysicsModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.ProfilerModule">
+			<HintPath>D:\augus\Programs\Steam\steamapps\common\Sunken Engine\MelonLoader\Il2CppAssemblies\UnityEngine.ProfilerModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.PropertiesModule">
+			<HintPath>D:\augus\Programs\Steam\steamapps\common\Sunken Engine\MelonLoader\Il2CppAssemblies\UnityEngine.PropertiesModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule">
+			<HintPath>D:\augus\Programs\Steam\steamapps\common\Sunken Engine\MelonLoader\Il2CppAssemblies\UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.ScreenCaptureModule">
+			<HintPath>D:\augus\Programs\Steam\steamapps\common\Sunken Engine\MelonLoader\Il2CppAssemblies\UnityEngine.ScreenCaptureModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.SharedInternalsModule">
+			<HintPath>D:\augus\Programs\Steam\steamapps\common\Sunken Engine\MelonLoader\Il2CppAssemblies\UnityEngine.SharedInternalsModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.SpriteMaskModule">
+			<HintPath>D:\augus\Programs\Steam\steamapps\common\Sunken Engine\MelonLoader\Il2CppAssemblies\UnityEngine.SpriteMaskModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.SpriteShapeModule">
+			<HintPath>D:\augus\Programs\Steam\steamapps\common\Sunken Engine\MelonLoader\Il2CppAssemblies\UnityEngine.SpriteShapeModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.StreamingModule">
+			<HintPath>D:\augus\Programs\Steam\steamapps\common\Sunken Engine\MelonLoader\Il2CppAssemblies\UnityEngine.StreamingModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.SubstanceModule">
+			<HintPath>D:\augus\Programs\Steam\steamapps\common\Sunken Engine\MelonLoader\Il2CppAssemblies\UnityEngine.SubstanceModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.SubsystemsModule">
+			<HintPath>D:\augus\Programs\Steam\steamapps\common\Sunken Engine\MelonLoader\Il2CppAssemblies\UnityEngine.SubsystemsModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.TerrainModule">
+			<HintPath>D:\augus\Programs\Steam\steamapps\common\Sunken Engine\MelonLoader\Il2CppAssemblies\UnityEngine.TerrainModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.TerrainPhysicsModule">
+			<HintPath>D:\augus\Programs\Steam\steamapps\common\Sunken Engine\MelonLoader\Il2CppAssemblies\UnityEngine.TerrainPhysicsModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.TextCoreFontEngineModule">
+			<HintPath>D:\augus\Programs\Steam\steamapps\common\Sunken Engine\MelonLoader\Il2CppAssemblies\UnityEngine.TextCoreFontEngineModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.TextCoreTextEngineModule">
+			<HintPath>D:\augus\Programs\Steam\steamapps\common\Sunken Engine\MelonLoader\Il2CppAssemblies\UnityEngine.TextCoreTextEngineModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.TextRenderingModule">
+			<HintPath>D:\augus\Programs\Steam\steamapps\common\Sunken Engine\MelonLoader\Il2CppAssemblies\UnityEngine.TextRenderingModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.TilemapModule">
+			<HintPath>D:\augus\Programs\Steam\steamapps\common\Sunken Engine\MelonLoader\Il2CppAssemblies\UnityEngine.TilemapModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.TLSModule">
+			<HintPath>D:\augus\Programs\Steam\steamapps\common\Sunken Engine\MelonLoader\Il2CppAssemblies\UnityEngine.TLSModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.UI">
+			<HintPath>D:\augus\Programs\Steam\steamapps\common\Sunken Engine\MelonLoader\Il2CppAssemblies\UnityEngine.UI.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.UIElementsModule">
+			<HintPath>D:\augus\Programs\Steam\steamapps\common\Sunken Engine\MelonLoader\Il2CppAssemblies\UnityEngine.UIElementsModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.UIModule">
+			<HintPath>D:\augus\Programs\Steam\steamapps\common\Sunken Engine\MelonLoader\Il2CppAssemblies\UnityEngine.UIModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.UmbraModule">
+			<HintPath>D:\augus\Programs\Steam\steamapps\common\Sunken Engine\MelonLoader\Il2CppAssemblies\UnityEngine.UmbraModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.UnityAnalyticsCommonModule">
+			<HintPath>D:\augus\Programs\Steam\steamapps\common\Sunken Engine\MelonLoader\Il2CppAssemblies\UnityEngine.UnityAnalyticsCommonModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.UnityAnalyticsModule">
+			<HintPath>D:\augus\Programs\Steam\steamapps\common\Sunken Engine\MelonLoader\Il2CppAssemblies\UnityEngine.UnityAnalyticsModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.UnityConnectModule">
+			<HintPath>D:\augus\Programs\Steam\steamapps\common\Sunken Engine\MelonLoader\Il2CppAssemblies\UnityEngine.UnityConnectModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.UnityCurlModule">
+			<HintPath>D:\augus\Programs\Steam\steamapps\common\Sunken Engine\MelonLoader\Il2CppAssemblies\UnityEngine.UnityCurlModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.UnityTestProtocolModule">
+			<HintPath>D:\augus\Programs\Steam\steamapps\common\Sunken Engine\MelonLoader\Il2CppAssemblies\UnityEngine.UnityTestProtocolModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.UnityWebRequestAssetBundleModule">
+			<HintPath>D:\augus\Programs\Steam\steamapps\common\Sunken Engine\MelonLoader\Il2CppAssemblies\UnityEngine.UnityWebRequestAssetBundleModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.UnityWebRequestAudioModule">
+			<HintPath>D:\augus\Programs\Steam\steamapps\common\Sunken Engine\MelonLoader\Il2CppAssemblies\UnityEngine.UnityWebRequestAudioModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.UnityWebRequestModule">
+			<HintPath>D:\augus\Programs\Steam\steamapps\common\Sunken Engine\MelonLoader\Il2CppAssemblies\UnityEngine.UnityWebRequestModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.UnityWebRequestTextureModule">
+			<HintPath>D:\augus\Programs\Steam\steamapps\common\Sunken Engine\MelonLoader\Il2CppAssemblies\UnityEngine.UnityWebRequestTextureModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.UnityWebRequestWWWModule">
+			<HintPath>D:\augus\Programs\Steam\steamapps\common\Sunken Engine\MelonLoader\Il2CppAssemblies\UnityEngine.UnityWebRequestWWWModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.VehiclesModule">
+			<HintPath>D:\augus\Programs\Steam\steamapps\common\Sunken Engine\MelonLoader\Il2CppAssemblies\UnityEngine.VehiclesModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.VFXModule">
+			<HintPath>D:\augus\Programs\Steam\steamapps\common\Sunken Engine\MelonLoader\Il2CppAssemblies\UnityEngine.VFXModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.VideoModule">
+			<HintPath>D:\augus\Programs\Steam\steamapps\common\Sunken Engine\MelonLoader\Il2CppAssemblies\UnityEngine.VideoModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.VRModule">
+			<HintPath>D:\augus\Programs\Steam\steamapps\common\Sunken Engine\MelonLoader\Il2CppAssemblies\UnityEngine.VRModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.WindModule">
+			<HintPath>D:\augus\Programs\Steam\steamapps\common\Sunken Engine\MelonLoader\Il2CppAssemblies\UnityEngine.WindModule.dll</HintPath>
+		</Reference>
+		<Reference Include="UnityEngine.XRModule">
+			<HintPath>D:\augus\Programs\Steam\steamapps\common\Sunken Engine\MelonLoader\Il2CppAssemblies\UnityEngine.XRModule.dll</HintPath>
+		</Reference>
+		<Reference Include="MelonLoader">
+			<HintPath>D:\augus\Programs\Steam\steamapps\common\Sunken Engine\MelonLoader\net6\MelonLoader.dll</HintPath>
+		</Reference>
+		<Reference Include="0Harmony">
+			<HintPath>D:\augus\Programs\Steam\steamapps\common\Sunken Engine\MelonLoader\net6\0Harmony.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppInterop.Runtime">
+			<HintPath>D:\augus\Programs\Steam\steamapps\common\Sunken Engine\MelonLoader\net6\Il2CppInterop.Runtime.dll</HintPath>
+		</Reference>
+		<Reference Include="Il2CppInterop.Common">
+			<HintPath>D:\augus\Programs\Steam\steamapps\common\Sunken Engine\MelonLoader\net6\Il2CppInterop.Common.dll</HintPath>
+		</Reference>
+
+	</ItemGroup>
+
+	<PropertyGroup>
+		<AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+		<EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<Compile Include="Core.cs" />
+		<Compile Include="Fly.cs" />
+		<Compile Include="Level.cs" />
+		<Compile Include="License.cs" />
+		<Compile Include="Menu.cs" />
+		<Compile Include="Money.cs" />
+		<Compile Include="Radio.cs" />
+		<Compile Include="Sanity.cs" />
+		<Compile Include="Ship.cs" />
+		<Compile Include="Time.cs" />
+		<Compile Include="UIFix.cs" />
+	</ItemGroup>
+	
+	<Target Name="PostBuild" AfterTargets="PostBuildEvent">
+		<Exec Command="COPY &quot;$(TargetPath)&quot; &quot;D:\augus\Programs\Steam\steamapps\common\Sunken Engine\Mods&quot;" />
+	</Target>
+</Project>
