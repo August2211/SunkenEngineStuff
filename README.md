@@ -1,8 +1,11 @@
 # SunkenEngineStuff
 
 ## Basic feature overview
+
 Basic features to speed up progress or help test the game
+
 INSERT opens the menu with most the features
+
 V Enables/Disables flying with no collision
 
 ## Installation
