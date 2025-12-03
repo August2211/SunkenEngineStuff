@@ -1,9 +1,5 @@
-﻿using Il2Cpp;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using MelonLoader;
+using Il2Cpp;
 
 namespace SunkenEngineStuffStuff
 {
@@ -15,6 +11,8 @@ namespace SunkenEngineStuffStuff
             {
                 LicenseManager.Instance.UnlockLicense(license);
             }
+
+            MelonLogger.Msg($"[License] Unlocked {LicenseManager.Instance.Licenses.Count} licenses!");
         }
     }
 }

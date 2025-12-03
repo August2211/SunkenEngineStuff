@@ -11,6 +11,29 @@ namespace SunkenEngineStuffStuff
     {
         private static Il2CppSystem.Action OriginalSanityHandler = null;
 
+        private static bool isHandling = false;
+        private static float lockedSanityValue = -1;
+
+        public static Action SanityHandler = new Action(new System.Action(() =>
+        {
+            if(isHandling) return;
+            isHandling = true;
+
+            float NewSanity = GetSanity();
+            float Delta = NewSanity - lockedSanityValue;
+            if(Delta > 0) {
+                SanityManager.Instance.RemoveSanity(Delta);
+            }
+            else if (Delta < 0) {
+                SanityManager.Instance.AddSanity(-Delta);
+            }
+            SanityManager.Instance.SanitySaveLoadData.SanityValue = lockedSanityValue;
+
+            MelonLoader.MelonLogger.Msg($"[Sanity] Prevented the game from {(Delta > 0 ? "adding" : "removing")} {Delta} sanity!");
+
+            isHandling = false;
+        }));
+
         public static void AddSanity(float amount)
         {
             if (SanityManager.Instance != null)
@@ -52,12 +75,14 @@ namespace SunkenEngineStuffStuff
                 if(OriginalSanityHandler == null)
                 {
                     OriginalSanityHandler = SanityManager.Instance.OnSanityChanged;
-                    SanityManager.Instance.OnSanityChanged = null;
+                    SanityManager.Instance.OnSanityChanged = SanityHandler;
+                    lockedSanityValue = SanityManager.Instance.SanitySaveLoadData.SanityValue;
                 }
                 else
                 {
                     SanityManager.Instance.OnSanityChanged = OriginalSanityHandler;
                     OriginalSanityHandler = null;
+                    SanityManager.Instance.SanitySaveLoadData.SanityValue = -1;
                 }
             }
             else
