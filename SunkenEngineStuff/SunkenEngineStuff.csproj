@@ -396,6 +396,8 @@
 		<Compile Include="Ship.cs" />
 		<Compile Include="Time.cs" />
 		<Compile Include="UIFix.cs" />
+		<Compile Include="Duckhunt.cs" />
+		<Compile Include="Utils.cs" />
 	</ItemGroup>
 	
 	<Target Name="PostBuild" AfterTargets="PostBuildEvent">

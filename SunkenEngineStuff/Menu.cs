@@ -116,7 +116,7 @@ namespace SunkenEngineStuffStuff
 
     public class Menu
     {
-        private Rect windowRect = new Rect(100, 100, 280, 600);
+        private Rect windowRect = new Rect(100, 100, 280, 640);
         private string windowTitle = "Mod Menu";
 
         private bool menuVisible = false;
@@ -222,6 +222,12 @@ namespace SunkenEngineStuffStuff
             ModernUI.Button(new Rect(xOffset, yPos, buttonWidth, buttonHeight), "Unlock All Licenses", () =>
             {
                 License.UnlockAll();
+            });
+            yPos += buttonHeight + spacing;
+
+            ModernUI.Button(new Rect(xOffset, yPos, buttonWidth, buttonHeight), Duckhunt.AimbotEnabled() ? "Disable Aimbot" : "Enable Aimbot", () =>
+            {
+                Duckhunt.ToggleAimbot();
             });
 
             GUI.DragWindow();

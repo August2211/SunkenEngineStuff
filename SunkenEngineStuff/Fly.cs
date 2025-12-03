@@ -10,29 +10,12 @@ namespace SunkenEngineStuffStuff
         private static bool isFlying = false;
         private static Rigidbody playerBody;
         private static Collider playerCollider;
-        private static PlayerFPSController controller;
 
         public static bool IsFlying => isFlying;
-        private static PlayerFPSController GetPlayer()
-        {
-            if (controller != null)
-                return controller;
 
-            controller = UnityEngine.Object.FindObjectOfType<PlayerFPSController>();
-
-            if (controller == null)
-            {
-                MelonLogger.Warning("[Fly] Could not find PlayerFPSController in scene!");
-                return null;
-            }
-
-            MelonLogger.Msg("[Fly] Found PlayerFPSController on scene!");
-
-            return controller;
-        }
         public static void ToggleFly()
         {
-            var player = GetPlayer();
+            PlayerFPSController player = Utils.GetPlayer();
 
             if (player == null)
                 return;
@@ -84,7 +67,7 @@ namespace SunkenEngineStuffStuff
             if (!isFlying || playerBody == null)
                 return;
 
-            var kb = Keyboard.current;
+            Keyboard kb = Keyboard.current;
             if (kb == null)
                 return;
 
