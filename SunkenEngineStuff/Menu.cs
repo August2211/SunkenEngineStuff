@@ -116,7 +116,7 @@ namespace SunkenEngineStuffStuff
 
     public class Menu
     {
-        private Rect windowRect = new Rect(100, 100, 280, 640);
+        private Rect windowRect = new Rect(100, 100, 280, 700);
         private string windowTitle = "Mod Menu";
 
         private bool menuVisible = false;
@@ -133,7 +133,7 @@ namespace SunkenEngineStuffStuff
 
         private void DrawWindowContents(int id)
         {
-            float yPos = 10;
+            float yPos = 30;
             float spacing = 8;
             float buttonHeight = 32;
             float buttonWidth = 240;
@@ -202,7 +202,7 @@ namespace SunkenEngineStuffStuff
             });
             yPos += buttonHeight + spacing + 10;
 
-            ModernUI.Section(new Rect(10, yPos, 260, 160));
+            ModernUI.Section(new Rect(10, yPos, 260, 200));
             yPos += 5;
             ModernUI.Header(new Rect(xOffset, yPos, 200, 20), "Misc");
             yPos += 25;
@@ -225,7 +225,7 @@ namespace SunkenEngineStuffStuff
             });
             yPos += buttonHeight + spacing;
 
-            ModernUI.Button(new Rect(xOffset, yPos, buttonWidth, buttonHeight), Duckhunt.AimbotEnabled() ? "Disable Aimbot" : "Enable Aimbot", () =>
+            ModernUI.Button(new Rect(xOffset, yPos, buttonWidth, buttonHeight), Duckhunt.AimbotEnabled() ? "Disable Duckhunt Silent Aimbot" : "Enable Duckhunt Silent Aimbot", () =>
             {
                 Duckhunt.ToggleAimbot();
             });

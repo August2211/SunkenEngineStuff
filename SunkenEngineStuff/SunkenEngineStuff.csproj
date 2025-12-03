@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 	<PropertyGroup>
 		<TargetFramework>net6.0</TargetFramework>
 		<ImplicitUsings>enable</ImplicitUsings>
@@ -15,7 +15,7 @@
 	</PropertyGroup>
 
 	<PropertyGroup>
-		<GameDir>/home/august/.steam/steam/steamapps/common/Sunken Engine</GameDir>
+		<GameDir>D:\augus\Programs\Steam\steamapps\common\Sunken Engine</GameDir>
 		<Il2CppAssemblies>$(GameDir)/MelonLoader/Il2CppAssemblies</Il2CppAssemblies>
 		<MelonLoaderLib>$(GameDir)/MelonLoader/net6</MelonLoaderLib>
 		<ModsDir>$(GameDir)/Mods</ModsDir>
@@ -395,16 +395,13 @@
 		<Compile Include="Sanity.cs" />
 		<Compile Include="Ship.cs" />
 		<Compile Include="Time.cs" />
-		<Compile Include="UIFix.cs" />
 		<Compile Include="Duckhunt.cs" />
 		<Compile Include="Utils.cs" />
 	</ItemGroup>
 	
 	<Target Name="PostBuild" AfterTargets="PostBuildEvent">
-		<Exec Condition=" '$(OS)' == 'Windows_NT' "
-			Command="COPY &quot;$(TargetPath)&quot; &quot;$(GameDir)\Mods&quot;" />
+		<Exec Condition=" '$(OS)' == 'Windows_NT' " Command="COPY &quot;$(TargetPath)&quot; &quot;$(GameDir)\Mods&quot;" />
 
-		<Exec Condition=" '$(OS)' != 'Windows_NT' "
-			Command="cp &quot;$(TargetPath)&quot; &quot;$(GameDir)/Mods&quot;" />
+		<Exec Condition=" '$(OS)' != 'Windows_NT' " Command="cp &quot;$(TargetPath)&quot; &quot;$(GameDir)/Mods&quot;" />
 	</Target>
 </Project>

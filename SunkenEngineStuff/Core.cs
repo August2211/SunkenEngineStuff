@@ -18,7 +18,6 @@ namespace SunkenEngineStuffStuff
 
             MelonEvents.OnLateUpdate.Subscribe(menu.Keybinds);
             MelonEvents.OnUpdate.Subscribe(Fly.FlyMovementUpdate);
-            MelonEvents.OnUpdate.Subscribe(Duckhunt.Update);
             HarmonyInstance.PatchAll();
         }
 

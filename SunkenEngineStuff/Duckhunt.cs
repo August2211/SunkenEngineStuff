@@ -2,96 +2,55 @@ using Il2Cpp;
 using UnityEngine;
 using Il2CppSystem.Linq;
 using MelonLoader;
+using HarmonyLib;
+using Il2CppSystem.Runtime.Remoting.Messaging;
 
 namespace SunkenEngineStuffStuff
 {
-    public static class Duckhunt
+    [HarmonyPatch(typeof(CarnivalGameDuckHuntController), nameof(CarnivalGameDuckHuntController.ShootRaycastLogic))]
+    public static class Patch_ShootRaycastLogic
     {
-        private static bool aimbotEnabled = false;
-        private static float bulletSpeed = 100f;
-
-        public static void Update()
+        [HarmonyPrefix]
+        public static bool Prefix(CarnivalGameDuckHuntController __instance)
         {
-            if (!aimbotEnabled)
-                return;
-
-            if (!CarnivalManager.Instance.CarnivalGameDuckHuntController.IsGameActive)
+            if (!Duckhunt.AimbotEnabled() || !CarnivalManager.Instance.CarnivalGameDuckHuntController.IsGameActive)
             {
-                aimbotEnabled = false;
-                return;
+                return true;
             }
 
-            var controller = CarnivalManager.Instance.CarnivalGameDuckHuntController;
-            var cameraTarget = controller.CameraTarget;
-            var rifleRoot = controller.RifleRoot;
-
-            if (cameraTarget == null)
+            var activeTargets = __instance.activeTargets;
+            if (activeTargets != null && activeTargets.Count > 0)
             {
-                MelonLogger.Msg("[Duckhunt] CameraTarget is null!");
-                return;
-            }
-
-            var activeTargets = controller.activeTargets;
-            if (activeTargets == null || activeTargets.Count == 0)
-                return;
-
-            DuckHuntTargetController target = null;
-            foreach (var t in activeTargets)
-            {
-                if (t != null && t.Data != null && t.Data.HuntType == HuntType.Duck)
+                foreach (var t in activeTargets)
                 {
-                    target = t;
-                    break;
+                    if (t != null && t.Data != null && t.Data.HuntType == HuntType.Duck)
+                    {
+                        __instance.OnTargetShot(t);
+                        MelonLogger.Msg("[Duckhunt] Silent aimed duck!");
+                        return false;
+                    }
                 }
             }
 
-            if (target == null)
-                return;
-
-            Vector3 currentPos = (target.box != null)
-                ? target.box.bounds.center
-                : target.transform.position;
-
-            Vector3 duckVelocity = Vector3.zero;
-            
-            if (target.TryGetComponent<Rigidbody>(out var rb))
-            {
-                duckVelocity = rb.velocity;
-            }
-
-            float distance = Vector3.Distance(rifleRoot.position, currentPos);
-            
-            float travelTime = distance / bulletSpeed;
-            
-            Vector3 predictedPos = currentPos + (duckVelocity * travelTime);
-
-            predictedPos.y -= 0.1f;
-
-            Vector3 cameraLocalDirection =
-                cameraTarget.parent.InverseTransformPoint(predictedPos) - cameraTarget.localPosition;
-
-            Quaternion cameraLocalLook = Quaternion.LookRotation(cameraLocalDirection);
-            Vector3 cameraEuler = cameraLocalLook.eulerAngles;
-
-            cameraTarget.localRotation = Quaternion.Euler(cameraEuler.x, cameraEuler.y, 0f);
-
-            if (rifleRoot != null)
-            {
-                Vector3 worldDirection = (predictedPos - rifleRoot.position).normalized;
-                Quaternion worldRotation = Quaternion.LookRotation(worldDirection);
-                rifleRoot.rotation = worldRotation;
-            }
-
-            MelonLogger.Msg($"[Duckhunt] Predicting duck position. Travel time: {travelTime:F2}s, Distance: {distance:F2}");
+            return true;
         }
-        
-        public static void ToggleAimbot() {
-            MelonLoader.MelonLogger.Msg("[Duckhunt] Toggled Aimbot");
+    }
+
+
+
+    public static class Duckhunt
+    {
+        private static bool aimbotEnabled = false;
+
+        public static void ToggleAimbot()
+        {
+            MelonLogger.Msg("[Duckhunt] Toggled Aimbot");
 
             aimbotEnabled = !aimbotEnabled;
         }
 
-        public static bool AimbotEnabled() {
+        public static bool AimbotEnabled()
+        {
             return aimbotEnabled;
         }
     }
