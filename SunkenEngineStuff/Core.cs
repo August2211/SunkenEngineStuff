@@ -3,7 +3,7 @@ using SunkenEngineStuff;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-[assembly: MelonInfo(typeof(SunkenEngineStuffStuff.Core), "SunkenEngineStuffStuff", "1.0.0", "augus", null)]
+[assembly: MelonInfo(typeof(SunkenEngineStuffStuff.Core), "SunkenEngineStuffStuff", "1.1.0", "augus", null)]
 [assembly: MelonGame("Two Nomads Studio", "Sunken Engine")]
 
 namespace SunkenEngineStuffStuff
