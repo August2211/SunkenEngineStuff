@@ -116,7 +116,7 @@ namespace SunkenEngineStuffStuff
 
     public class Menu
     {
-        private Rect windowRect = new Rect(100, 100, 280, 700);
+        private Rect windowRect = new Rect(100, 100, 280, 720);
         private string windowTitle = "Mod Menu";
 
         private bool menuVisible = false;
@@ -202,7 +202,7 @@ namespace SunkenEngineStuffStuff
             });
             yPos += buttonHeight + spacing + 10;
 
-            ModernUI.Section(new Rect(10, yPos, 260, 200));
+            ModernUI.Section(new Rect(10, yPos, 260, 240));
             yPos += 5;
             ModernUI.Header(new Rect(xOffset, yPos, 200, 20), "Misc");
             yPos += 25;
@@ -228,6 +228,13 @@ namespace SunkenEngineStuffStuff
             ModernUI.Button(new Rect(xOffset, yPos, buttonWidth, buttonHeight), Duckhunt.AimbotEnabled() ? "Disable Duckhunt Silent Aimbot" : "Enable Duckhunt Silent Aimbot", () =>
             {
                 Duckhunt.ToggleAimbot();
+            });
+
+            yPos += buttonHeight + spacing;
+
+            ModernUI.Button(new Rect(xOffset, yPos, buttonWidth, buttonHeight), "Send Customers Home", () =>
+            {
+                Bazaar.ClearCustomers();
             });
 
             GUI.DragWindow();

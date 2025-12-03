@@ -385,6 +385,7 @@
 	</PropertyGroup>
 
 	<ItemGroup>
+		<Compile Include="Bazaar.cs" />
 		<Compile Include="Core.cs" />
 		<Compile Include="Fly.cs" />
 		<Compile Include="Level.cs" />
